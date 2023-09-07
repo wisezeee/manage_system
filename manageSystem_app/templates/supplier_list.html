@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supplier List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #333333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Supplier List</h1>
+    <ul>
+        {% for supplier in suppliers %}
+            <li>{{ supplier.name }} - {{ supplier.address }}</li>
+        {% empty %}
+            <li>No suppliers available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://phonoteka.org/uploads/posts/2022-02/1644411500_1-phonoteka-org-p-fon-dlya-saita-restorana-1.jpg');
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #333333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        h2 {
+            color: #666666;
+            margin-top: 30px;
+        }
+        
+        h2 a {
+            color: #666666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        h2 a:hover {
+            color: #ff9900;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Management System</h1>
+        
+        <h2><a href="{% url 'manageSystem_app:menu_list' %}">Menu</a></h2>
+        <h2><a href="{% url 'manageSystem_app:supplier_list' %}">Our Supplier</a></h2>
+        <h2><a href="{% url 'manageSystem_app:order_list' %}">Active Orders</a></h2>
+        <h2><a href="{% url 'manageSystem_app:order_create' %}">Create New Order</a></h2>
+
+    </div>
+</body>
+</html>
